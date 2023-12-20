@@ -25,7 +25,7 @@ for index, row in df.iterrows():
     if not os.path.exists(lang_folder):
         os.makedirs(lang_folder)
 
-    # Create or update the name.txt, subtitle.txt, and keywords.txt files
+    # Create or update the name.txt, subtitle.txt, keywords.txt, description.txt,"privacy_url.txt" & "support_url.txt" files
     for filename, content in [("name.txt", name), ("subtitle.txt", subtitle), ("keywords.txt", keywords),("description.txt", description),("privacy_url.txt", privacy),("support_url.txt", support)]:
         file_path = os.path.join(lang_folder, filename)
         with open(file_path, 'w', encoding='utf-8') as f:
